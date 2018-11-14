@@ -10,7 +10,7 @@ for (let i = 0; i < word.length; i++) {
 }
 let wrongGuess = [];
 
-document.getElementById("wordboard").innerHTML = answerArray.join(" ");
+document.getElementById("wordBoard").innerHTML = answerArray.join(" ");
 
 document.addEventListener('keypress', function(event) {
     let guess = event.key;
@@ -18,7 +18,7 @@ document.addEventListener('keypress', function(event) {
         if (word[b] === guess) {
             answerArray[b] = guess;
             remainingLetters--;
-            document.getElementById("wordboard").innerHTML = answerArray.join(" ");
+            document.getElementById("wordBoard").innerHTML = answerArray.join(" ");
         }
 }
         if (wrongGuess.includes(event.key)) {
@@ -30,6 +30,7 @@ document.addEventListener('keypress', function(event) {
             wrongGuess.push(guess);
             remainingGuesses--;
             document.getElementById("wrong").innerHTML = wrongGuess.join(" ").toUpperCase();
+            document.getElementById("guessesLeft").innerHTML = remainingGuesses;
         }
 })
 
