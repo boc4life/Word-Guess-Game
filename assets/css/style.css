@@ -14,3 +14,9 @@ body {
     border-style:dotted;
     border:1px;
 }
+
+#gamepic {
+    height:360px;
+    width:360px;
+    margin-top: 50px;
+}
