@@ -1,43 +1,48 @@
 var words = [ 
     {
-        display: "Joel Embiid",
+        display: "Joel Embiid - Philadelphia 76ers",
         gameWord: "embiid",
         gameImage: "assets/images/embiid.jpg"
     }, 
     {
-        display: "Ben Simmons",
+        display: "Ben Simmons - Philadelphia 76ers",
         gameWord: "simmons",
         gameImage: "assets/images/simmons.jpg"
     },
     {   
-        display: "Rhys Hoskins",
+        display: "Rhys Hoskins - Philadelphia Phillies",
         gameWord: "hoskins",
         gameImage: "assets/images/hoskins.jpg"
     },
     {
-        display: "Carson Wentz",
+        display: "Carson Wentz - Philadelphia Eagles",
         gameWord: "wentz",
         gameImage: "assets/images/wentz.jpg"
     },
     {
-        display: "Robert Covington",
+        display: "Robert Covington - forever a Philadelphia 76er",
         gameWord: "covington",
         gameImage: "assets/images/covington.jpg"
     },
     {
-        display: "Claude Giroux",
+        display: "Claude Giroux - Philadelphia Flyers",
         gameWord: "giroux",
         gameImage: "assets/images/giroux.jpg"
     },    
     {
-        display: "Nelson Agholor",
+        display: "Nelson Agholor - Philadelphia Eagles",
         gameWord: "agholor",
         gameImage: "assets/images/agholor.jpg"
     },
     {
-        display: "JP Crawford",
+        display: "JP Crawford - Philadelphia Phillies",
         gameWord: "crawford",
         gameImage: "assets/images/crawford.jpg"
+    },
+    {
+        display: "Carpe - Philadelphia Fusion",
+        gameWord: "carpe",
+        gameImage: "assets/images/carpe.jpg"
     }
 ];
 
@@ -89,6 +94,7 @@ document.addEventListener('keydown', function(event) {
             wins++;
             document.getElementById("wins").innerHTML = wins;
             startGame();
+            document.getElementById("wrong").innerHTML = wrongGuess;
         }
 })
 
