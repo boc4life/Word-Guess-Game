@@ -18,7 +18,27 @@ var words = [
         display: "Carson Wentz",
         gameWord: "wentz",
         gameImage: "assets/images/wentz.jpg"
-    }    
+    },
+    {
+        display: "Robert Covington",
+        gameWord: "covington",
+        gameImage: "assets/images/covington.jpg"
+    },
+    {
+        display: "Claude Giroux",
+        gameWord: "giroux",
+        gameImage: "assets/images/giroux.jpg"
+    },    
+    {
+        display: "Nelson Agholor",
+        gameWord: "agholor",
+        gameImage: "assets/images/agholor.jpg"
+    },
+    {
+        display: "JP Crawford",
+        gameWord: "crawford",
+        gameImage: "assets/images/crawford.jpg"
+    }
 ];
 
 var chosenWord;
