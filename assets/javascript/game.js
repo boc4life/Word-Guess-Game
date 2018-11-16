@@ -43,6 +43,21 @@ var words = [
         display: "Carpe - Philadelphia Fusion",
         gameWord: "carpe",
         gameImage: "assets/images/carpe.jpg"
+    },
+    {
+        display: "CJ Sapong - Philadelphia Union",
+        gameWord: "sapong",
+        gameImage: "assets/images/sapong.jpg"
+    },
+    {
+        display: "Ivan Provorov - Philadelphia Flyers",
+        gameWord: "provorov",
+        gameImage: "assets/images/provorov.jpg"
+    },
+    {
+        display: "Nick Foles - Philadelphia Eagles Super Bowl MVP",
+        gameWord: "foles",
+        gameImage: "assets/images/foles.jpg"
     }
 ];
 
