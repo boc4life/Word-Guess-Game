@@ -1,4 +1,4 @@
-let words = [ 
+var words = [ 
     {
         display: "Joel Embiid",
         gameWord: "embiid",
@@ -21,28 +21,20 @@ let words = [
     }    
 ];
 
-function winnerImage(imgName) {
-    image = document.getElementById("gamepic");
-    image.src = imgName;
-}
+var chosenWord;
+var word;
+var remainingLetters;
+var remainingGuesses;
+var answerArray;
+var wrongGuess;
 
-let chosenWord = words[Math.floor(Math.random() * words.length)];
-let word = chosenWord.gameWord;
-let remainingLetters = word.length
-let remainingGuesses = 6;
 let wins = 0;
 
-let answerArray = [];
-for (let i = 0; i < word.length; i++) {
-    answerArray[i] = "_";
-}
-let wrongGuess = [];
-
-document.getElementById("wordBoard").innerHTML = answerArray.join(" ");
-document.getElementById("guessesLeft").innerHTML = remainingGuesses;
 document.getElementById("wins").innerHTML = wins;
 
-document.addEventListener('keypress', function(event) {
+startGame();
+
+document.addEventListener('keydown', function(event) {
     let guess = event.key;
     for (let b = 0; b < word.length; b++) {
         if (word[b] === guess) {
@@ -58,6 +50,7 @@ document.addEventListener('keypress', function(event) {
                 winnerImage(chosenWord.gameImage);
                 wins++;
                 document.getElementById("wins").innerHTML = wins;
+                startGame();
             }
         }
 }
@@ -73,6 +66,27 @@ document.addEventListener('keypress', function(event) {
             document.getElementById("guessesLeft").innerHTML = remainingGuesses;
             if (remainingGuesses === 0) {
                 alert("You lost! The correct answer was " + word);
+                startGame();
             }
         }
 })
+
+function startGame() {    
+    chosenWord = words[Math.floor(Math.random() * words.length)];
+    word = chosenWord.gameWord;
+    remainingLetters = word.length;
+    remainingGuesses = 6;
+    answerArray = [];
+        for (let i = 0; i < word.length; i++) {
+        answerArray[i] = "_";
+}
+    wrongGuess = [];
+
+    document.getElementById("wordBoard").innerHTML = answerArray.join(" ");
+    document.getElementById("guessesLeft").innerHTML = remainingGuesses;
+}
+
+function winnerImage(imgName) {
+    image = document.getElementById("gamepic");
+    image.src = imgName;
+}
