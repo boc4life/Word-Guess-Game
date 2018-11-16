@@ -43,15 +43,7 @@ document.addEventListener('keydown', function(event) {
             }
             answerArray[b] = guess;
             document.getElementById("wordBoard").innerHTML = answerArray.join(" ");
-            console.log(remainingLetters);
-            if (remainingLetters === 0) {
-                alert("You won!");
-                document.getElementById("answerDisplay").innerHTML = chosenWord.display;
-                winnerImage(chosenWord.gameImage);
-                wins++;
-                document.getElementById("wins").innerHTML = wins;
-                startGame();
-            }
+            
         }
 }
         if (wrongGuess.includes(event.key)) {
@@ -67,7 +59,16 @@ document.addEventListener('keydown', function(event) {
             if (remainingGuesses === 0) {
                 alert("You lost! The correct answer was " + word);
                 startGame();
+                document.getElementById("wrong").innerHTML = wrongGuess;
             }
+        }
+        if (remainingLetters === 0) {
+            alert("You won!");
+            document.getElementById("answerDisplay").innerHTML = chosenWord.display;
+            winnerImage(chosenWord.gameImage);
+            wins++;
+            document.getElementById("wins").innerHTML = wins;
+            startGame();
         }
 })
 
